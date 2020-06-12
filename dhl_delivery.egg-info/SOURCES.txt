@@ -2,7 +2,6 @@ CHANGES.txt
 LICENSE.txt
 MANIFEST.in
 README.txt
-requirements.txt
 setup.py
 dhl_delivery/__init__.py
 dhl_delivery/admin.py
