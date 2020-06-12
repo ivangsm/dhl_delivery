@@ -99,7 +99,7 @@ Charges**
 **The Reponse you will get will look similar to**
    
 
-``` json
+``` javascript
    {
        status: true,
        message: "DHL quotes returned."
@@ -222,7 +222,7 @@ Number**
 
 **The response you will get will look similar to**
 
-``` json
+``` javascript
    {
        pickup_response: {
            //if in request data pickup details provided then here you will get the status True on success and False on fail
