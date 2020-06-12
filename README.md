@@ -14,7 +14,6 @@ DHL delivery provides DHL API Services. It is simple to use.
     6. Internally Check If Response Available form DHL
     7. Spacify Maximum Execution Time - For how many second the API should try to get response from DHL
 
-
 Get Started - Install
 =====================
 
@@ -22,13 +21,13 @@ Get Started - Install
 
     pip install dhl_delivery
 
-
 Usage - DHL Quote and Capability Service
 ========================================
 
 **Example to get Quote and Capability Service - get the DHL delivery Charges**::
 
-    import dhl_delivery
+``` python
+import dhl_delivery
 
     # these two generally your company need to contact DHL to obtain form DHL
     dhl_delivery.dhl_site_id = 'your DHL site id - obtained from DHL'
@@ -96,8 +95,10 @@ Usage - DHL Quote and Capability Service
 
     # with the prepare data call the function and get the response
     dict_response = dhl_delivery.quote.get_quote(quote_data_to_send)
+```
 
-    # **The Reponse you will get will look similar to**
+``` json
+# **The Reponse you will get will look similar to**
     {
         status: true,
         message: "DHL quotes returned."
@@ -110,14 +111,17 @@ Usage - DHL Quote and Capability Service
             currency_code: "MYR"
         }
     }
+```
 
+    
 
 Usage - DHL delivery
 ====================
 
 **Example DHL delivery Validation - DHL Label Image utility - Label Creation (PDF File) - Airway Bill Number - Pickup - Pickup Reference Number**::
-    
-    import dhl_delivery
+
+``` python
+import dhl_delivery
     
     # these three generally your company need to contact DHL to obtain form DHL
     dhl_delivery.dhl_site_id = 'your DHL site id - obtained from DHL'
@@ -213,8 +217,10 @@ Usage - DHL delivery
     
     # with the prepare data call the function and get the response
     dict_response = dhl_delivery.delivery.get_delivery(delivery_data_to_send)
+```
 
-    # **The Reponse you will get will look similar to**
+``` json
+# **The Reponse you will get will look similar to**
     {
         pickup_response: {
             # if in request data pickup details provided then here you will get the status True on success and False on fail
@@ -233,16 +239,11 @@ Usage - DHL delivery
             airway_bill_number: "9687040086"
         }
     }
-
+```
 
 Remove - Uninstall
 ==================
 
 **How to uninstall**:
 
-* pip uninstall dhl_delivery
-
-
-Contact
-=======
-* `Linkedin <https://www.linkedin.com/in/hasanuzzaman-syed-85585517>`_.   
+* pip uninstall dhl_delivery  
