@@ -1,6 +1,6 @@
 import dhl_delivery.quote
 import dhl_delivery.pickup
-import dhl_delivery.delivery
+import dhl_delivery.shipment
 
 dhl_site_id = ''
 dhl_site_password = ''
@@ -25,4 +25,4 @@ dhl_delivery.duty_payment_type = 'R'  # duty always will be paid by Reciver
 
 quote = dhl_delivery.quote.Quote()
 pickup = dhl_delivery.pickup.Pickup()
-delivery = dhl_delivery.delivery.delivery()
+shipment = dhl_delivery.shipment.Shipment()

@@ -1,7 +1,8 @@
 CHANGES.txt
 LICENSE.txt
 MANIFEST.in
-README.txt
+README.md
+setup.cfg
 setup.py
 dhl_delivery/__init__.py
 dhl_delivery/admin.py
@@ -12,7 +13,7 @@ dhl_delivery/dhl_process.py
 dhl_delivery/models.py
 dhl_delivery/pickup.py
 dhl_delivery/quote.py
-dhl_delivery/delivery.py
+dhl_delivery/shipment.py
 dhl_delivery/tests.py
 dhl_delivery/views.py
 dhl_delivery.egg-info/.DS_Store
