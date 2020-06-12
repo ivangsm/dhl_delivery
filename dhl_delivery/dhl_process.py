@@ -4,7 +4,8 @@ import multiprocessing
 
 import dhl_delivery
 import dhl_delivery.config
-import urllib2
+from urllib import request
+from urllib.request import urlopen
 
 class DhlProcess:
     def __init__(self):
@@ -53,8 +54,8 @@ class DhlProcess:
     @staticmethod
     def call_dhl_quote_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        url_request = urllib2.Request(url, xml_formated_data_string)
-        url_response = urllib2.urlopen(url_request)
+        # url_request = urllib2.Request(url, xml_formated_data_string)
+        url_response = urlopen(url, xml_formated_data_string)
         url_response_data = url_response.read()  # getting as XML String from DHL Response
         return_dict['return_dhl_api_response'] = url_response_data
 
@@ -83,8 +84,8 @@ class DhlProcess:
     @staticmethod
     def call_dhl_delivery_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        url_request = urllib2.Request(url, xml_formated_data_string)
-        url_response = urllib2.urlopen(url_request)
+        # url_request = urllib2.Request(url, xml_formated_data_string)
+        url_response = urlopen(url, xml_formated_data_string)
         url_response_data = url_response.read()  # getting as XML String from DHL Response
         return_dict['return_dhl_api_response'] = url_response_data
 
@@ -114,7 +115,7 @@ class DhlProcess:
     @staticmethod
     def call_dhl_pickup_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        url_request = urllib2.Request(url, xml_formated_data_string)
-        url_response = urllib2.urlopen(url_request)
+        # url_request = urllib2.Request(url, xml_formated_data_string)
+        url_response = urlopen(url, xml_formated_data_string)
         url_response_data = url_response.read()  # getting as XML String from DHL Response
         return_dict['return_dhl_api_response'] = url_response_data

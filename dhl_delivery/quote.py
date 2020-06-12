@@ -5,7 +5,6 @@ import dhl_delivery.dhl_process
 
 import xmltodict
 
-import urllib2
 import datetime
 import random
 
