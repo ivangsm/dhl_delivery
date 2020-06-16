@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='dhl_delivery',
-    version='2.0.9',
+    version='2.0.10',
     author='Iván Salazar',
     author_email='ivangio.salazar@gmail.com',
     packages=['dhl_delivery'],
