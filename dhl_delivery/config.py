@@ -5,4 +5,4 @@ message_quote_success = 'DHL quotes returned.'
 message_delivery_success = 'DHL delivery created.'
 message_pickup_success = 'DHL Pickup created.'
 
-message_request_data_bad_format = 'The data you have sent is not well formated. It looks like some key-value pair are missing. Please check the documentatipn and send proper request data.'
+message_request_data_bad_format = 'The data you have sent is not well formated. It looks like some key-value pair are missing. Please check the documentation and send proper request data.'
