@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: dhl-delivery
-Version: 2.0.8
+Version: 2.0.9
 Summary: DHL Capability - Quote & Shipment
 Home-page: http://pypi.python.org/pypi/dhl_delivery/
 Author: Iván Salazar
 Author-email: ivangio.salazar@gmail.com
-License: LICENSE.txt
+License: MIT
 Description: # DHL delivery
          
         
@@ -107,7 +107,7 @@ Description: # DHL delivery
         **The Reponse you will get will look similar to**
            
         
-        ``` json
+        ``` javascript
            {
                status: true,
                message: "DHL quotes returned."
@@ -230,7 +230,7 @@ Description: # DHL delivery
         
         **The response you will get will look similar to**
         
-        ``` json
+        ``` javascript
            {
                pickup_response: {
                    //if in request data pickup details provided then here you will get the status True on success and False on fail

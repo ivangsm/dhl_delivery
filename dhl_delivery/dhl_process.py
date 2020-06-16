@@ -7,6 +7,7 @@ import dhl_delivery.config
 from urllib import request
 from urllib.request import urlopen
 
+
 class DhlProcess:
     def __init__(self):
         pass
@@ -28,18 +29,21 @@ class DhlProcess:
                     p.terminate()
                 except:
                     pass
-    
+
     def process_quote(self, xml_formated_data_string):
         time_now = datetime.now()
 
         manager = multiprocessing.Manager()
         return_dict = manager.dict()
         jobs = []
-        p_one = multiprocessing.Process(target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
+        p_one = multiprocessing.Process(
+            target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
         jobs.append(p_one)
-        p_two = multiprocessing.Process(target=self.call_dhl_quote_api, name="name_call_dhl_quote_api", args=(xml_formated_data_string, return_dict))
+        p_two = multiprocessing.Process(target=self.call_dhl_quote_api, name="name_call_dhl_quote_api", args=(
+            xml_formated_data_string, return_dict))
         jobs.append(p_two)
-        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(p_two, time_now, dhl_delivery.max_response_time))
+        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(
+            p_two, time_now, dhl_delivery.max_response_time))
 
         # Start the jobs
         p_one.start()
@@ -56,7 +60,8 @@ class DhlProcess:
         url = dhl_delivery.config.dhl_api_url
         # url_request = urllib2.Request(url, xml_formated_data_string)
         url_response = urlopen(url, xml_formated_data_string)
-        url_response_data = url_response.read()  # getting as XML String from DHL Response
+        # getting as XML String from DHL Response
+        url_response_data = url_response.read()
         return_dict['return_dhl_api_response'] = url_response_data
 
     def process_delivery(self, xml_formated_data_string):
@@ -65,11 +70,14 @@ class DhlProcess:
         manager = multiprocessing.Manager()
         return_dict = manager.dict()
         jobs = []
-        p_one = multiprocessing.Process(target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
+        p_one = multiprocessing.Process(
+            target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
         jobs.append(p_one)
-        p_two = multiprocessing.Process(target=self.call_dhl_delivery_api, name="name_call_dhl_delivery_api", args=(xml_formated_data_string, return_dict))
+        p_two = multiprocessing.Process(target=self.call_dhl_delivery_api, name="name_call_dhl_delivery_api", args=(
+            xml_formated_data_string, return_dict))
         jobs.append(p_two)
-        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(p_two, time_now, dhl_delivery.max_response_time))
+        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(
+            p_two, time_now, dhl_delivery.max_response_time))
 
         # Start the jobs
         p_one.start()
@@ -86,9 +94,9 @@ class DhlProcess:
         url = dhl_delivery.config.dhl_api_url
         # url_request = urllib2.Request(url, xml_formated_data_string)
         url_response = urlopen(url, xml_formated_data_string)
-        url_response_data = url_response.read()  # getting as XML String from DHL Response
+        # getting as XML String from DHL Response
+        url_response_data = url_response.read()
         return_dict['return_dhl_api_response'] = url_response_data
-
 
     def process_pickup(self, xml_formated_data_string):
         time_now = datetime.now()
@@ -96,11 +104,14 @@ class DhlProcess:
         manager = multiprocessing.Manager()
         return_dict = manager.dict()
         jobs = []
-        p_one = multiprocessing.Process(target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
+        p_one = multiprocessing.Process(
+            target=self.check_utilities, name="name_check_utilities", args=(20, return_dict))
         jobs.append(p_one)
-        p_two = multiprocessing.Process(target=self.call_dhl_pickup_api, name="name_call_dhl_pickup_api", args=(xml_formated_data_string, return_dict))
+        p_two = multiprocessing.Process(target=self.call_dhl_pickup_api, name="name_call_dhl_pickup_api", args=(
+            xml_formated_data_string, return_dict))
         jobs.append(p_two)
-        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(p_two, time_now, dhl_delivery.max_response_time))
+        p_stop = multiprocessing.Process(target=self.stop_process, name="name_stop_process", args=(
+            p_two, time_now, dhl_delivery.max_response_time))
 
         # Start the jobs
         p_one.start()
@@ -117,5 +128,6 @@ class DhlProcess:
         url = dhl_delivery.config.dhl_api_url
         # url_request = urllib2.Request(url, xml_formated_data_string)
         url_response = urlopen(url, xml_formated_data_string)
-        url_response_data = url_response.read()  # getting as XML String from DHL Response
+        # getting as XML String from DHL Response
+        url_response_data = url_response.read()
         return_dict['return_dhl_api_response'] = url_response_data

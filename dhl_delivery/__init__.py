@@ -4,7 +4,7 @@ import dhl_delivery.shipment
 
 dhl_site_id = ''
 dhl_site_password = ''
-dhl_account_no = ''  
+dhl_account_no = ''
 
 dhl_response_flag = False
 dhl_xml_flag = False
@@ -20,7 +20,7 @@ dhl_delivery.dhl_response_flag = dhl_xml_flag
 dhl_delivery.max_response_time = 60
 
 # for delivery
-dhl_delivery.delivery_payment_type = 'S'  # S -  always paid by shipper 
+dhl_delivery.delivery_payment_type = 'S'  # S -  always paid by shipper
 dhl_delivery.duty_payment_type = 'R'  # duty always will be paid by Reciver
 
 quote = dhl_delivery.quote.Quote()

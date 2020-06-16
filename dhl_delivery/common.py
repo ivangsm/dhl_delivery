@@ -13,13 +13,13 @@ class Common:
         if field in dict_data:
             found_flag = True
             eureka = dict_data[field]
-            #return dict_data[field]
+            # return dict_data[field]
         for k, v in dict_data.items():
             if isinstance(v, dict):
                 eureka = self.in_dictionary(field, v)
                 if eureka is not None:
                     found_flag = True
-                    #return eureka
+                    # return eureka
         if found_flag == True:
             return eureka
         else:
@@ -69,21 +69,21 @@ class Common:
         Get region code AP|AM|EU by country code
         """
         region_code = ''
-        ap_list = ['AE', 'AF', 'AL', 'AM', 'AO', 'AU', 'BA', 'BD', 'BH', 'BN', 
-        'BY', 'CI', 'CM', 'CN', 'CY', 'DJ', 'DZ', 'EG', 'ET', 'FJ', 'GA', 'GH', 
-        'HK', 'HR', 'ID', 'IL', 'IN', 'IR', 'JO', 'JP', 'KE', 'KR', 'KW', 'KZ', 
-        'LA', 'LB', 'LK', 'MA', 'MD', 'MG', 'MK', 'MO', 'MT', 'MU', 'MY', 'NA', 
-        'NG', 'NZ', 'OM', 'PH', 'PK', 'QA', 'RE', 'RS', 'RU', 'SA', 'SD', 'SG', 
-        'SN', 'TH', 'TR', 'TW', 'TZ', 'UA', 'UG', 'UZ', 'VN', 'YE', 'ZA']
+        ap_list = ['AE', 'AF', 'AL', 'AM', 'AO', 'AU', 'BA', 'BD', 'BH', 'BN',
+                   'BY', 'CI', 'CM', 'CN', 'CY', 'DJ', 'DZ', 'EG', 'ET', 'FJ', 'GA', 'GH',
+                   'HK', 'HR', 'ID', 'IL', 'IN', 'IR', 'JO', 'JP', 'KE', 'KR', 'KW', 'KZ',
+                   'LA', 'LB', 'LK', 'MA', 'MD', 'MG', 'MK', 'MO', 'MT', 'MU', 'MY', 'NA',
+                   'NG', 'NZ', 'OM', 'PH', 'PK', 'QA', 'RE', 'RS', 'RU', 'SA', 'SD', 'SG',
+                   'SN', 'TH', 'TR', 'TW', 'TZ', 'UA', 'UG', 'UZ', 'VN', 'YE', 'ZA']
 
-        eu_list = ['AT', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 
-        'FI', 'FR', 'GB', 'GR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV', 
-        'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK' ]
+        eu_list = ['AT', 'BE', 'BG', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES',
+                   'FI', 'FR', 'GB', 'GR', 'HU', 'IE', 'IS', 'IT', 'LT', 'LU', 'LV',
+                   'NL', 'NO', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK']
 
-        am_list = ['AI', 'AR', 'AW', 'BB', 'BM', 'BO', 'BR', 'BS', 'CA', 'CL', 
-        'CO', 'CR', 'DM', 'DO', 'EC', 'GP', 'GT', 'GU', 'GY', 'HN', 'HT', 'JM', 
-        'KN', 'KY', 'LC', 'MQ', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SV', 'TC', 
-        'TT', 'US', 'UY', 'VE', 'VG', 'VI', 'XM', 'XY']
+        am_list = ['AI', 'AR', 'AW', 'BB', 'BM', 'BO', 'BR', 'BS', 'CA', 'CL',
+                   'CO', 'CR', 'DM', 'DO', 'EC', 'GP', 'GT', 'GU', 'GY', 'HN', 'HT', 'JM',
+                   'KN', 'KY', 'LC', 'MQ', 'MX', 'NI', 'PA', 'PE', 'PR', 'PY', 'SV', 'TC',
+                   'TT', 'US', 'UY', 'VE', 'VG', 'VI', 'XM', 'XY']
 
         if country_code in ap_list:
             region_code = 'AP'
