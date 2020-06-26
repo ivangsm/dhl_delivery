@@ -58,8 +58,8 @@ class DhlProcess:
     @staticmethod
     def call_dhl_quote_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        data = urllib.parse.urlencode(xml_formated_data_string)
-        data = data.encode('ascii')
+        # data = urllib.parse.urlencode(xml_formated_data_string)
+        # data = data.encode('ascii')
         url_request = urllib.request.Request(url, xml_formated_data_string)
         with urllib.request.urlopen(url_request) as response:
             url_response = response.read()
@@ -95,8 +95,8 @@ class DhlProcess:
     @staticmethod
     def call_dhl_delivery_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        data = urllib.parse.urlencode(xml_formated_data_string)
-        data = data .encode('ascii')
+        # data = urllib.parse.urlencode(xml_formated_data_string)
+        # data = data .encode('ascii')
         url_request = urllib.request.Request(url, xml_formated_data_string)
         with urllib.request.urlopen(url_request) as response:
             url_response = response.read()
@@ -131,8 +131,8 @@ class DhlProcess:
     @staticmethod
     def call_dhl_pickup_api(xml_formated_data_string, return_dict):
         url = dhl_delivery.config.dhl_api_url
-        data = urllib.parse.urlencode(xml_formated_data_string)
-        data = data.encode('ascii')
+        # data = urllib.parse.urlencode(xml_formated_data_string)
+        # data = data.encode('ascii')
         url_request = urllib.request.Request(url, xml_formated_data_string)
         with urllib.request.urlopen(url_request) as response:
             url_response = response.read()
